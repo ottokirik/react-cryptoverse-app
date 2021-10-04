@@ -1,3 +1,5 @@
+- react
+- react-router-dom
 - antd @ant-design/icons
 - react-redux @reduxjs/toolkit
 - axios
