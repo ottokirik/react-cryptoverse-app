@@ -16,16 +16,16 @@ export const Navbar = () => {
         </Typography.Title>
       </div>
       <Menu theme="dark">
-        <Menu.Item icon={<HomeOutlined />}>
+        <Menu.Item key={routesPath.HOME} icon={<HomeOutlined />}>
           <Link to={routesPath.HOME}>Home</Link>
         </Menu.Item>
-        <Menu.Item icon={<FundOutlined />}>
+        <Menu.Item key={routesPath.CRYPTOCURRENCIES} icon={<FundOutlined />}>
           <Link to={routesPath.CRYPTOCURRENCIES}>Cryptocurrencies</Link>
         </Menu.Item>
-        <Menu.Item icon={<MoneyCollectOutlined />}>
+        <Menu.Item key={routesPath.EXCHANGES} icon={<MoneyCollectOutlined />}>
           <Link to={routesPath.EXCHANGES}>Exchanges</Link>
         </Menu.Item>
-        <Menu.Item icon={<BulbOutlined />}>
+        <Menu.Item key={routesPath.NEWS} icon={<BulbOutlined />}>
           <Link to={routesPath.NEWS}>News</Link>
         </Menu.Item>
       </Menu>
