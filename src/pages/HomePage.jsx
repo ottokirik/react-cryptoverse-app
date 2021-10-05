@@ -52,7 +52,7 @@ export const HomePage = () => {
         </Title>
       </div>
 
-      <News simplified />
+      <News simplified isOnHomePage />
     </>
   );
 };
