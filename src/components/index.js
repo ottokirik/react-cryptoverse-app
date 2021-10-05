@@ -1,3 +1,3 @@
 export * from './Navbar';
-export * from './Cryptocurrencies';
+export * from './Cryptocurrencies.jsx';
 export * from './News';
