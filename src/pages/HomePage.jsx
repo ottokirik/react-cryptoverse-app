@@ -1,5 +1,8 @@
 import { Typography, Row, Col, Statistic } from 'antd';
+import { Cryptocurrencies, News } from 'components';
 import millify from 'millify';
+import { Link } from 'react-router-dom';
+import { routesPath } from 'routes';
 import { useGetCryptosQuery } from 'services/cryptoApi';
 
 const { Title } = Typography;
@@ -29,6 +32,28 @@ export const HomePage = () => {
           <Statistic title="Total 24h Volume" value={millify(globalStats.total24hVolume)} />
         </Col>
       </Row>
+
+      <div className="home-heading-container">
+        <Title level={2} className="home-title">
+          Top 10 cryptocurencies in the world
+        </Title>
+        <Title level={3} className="show-more">
+          <Link to={routesPath.CRYPTOCURRENCIES}>Show More</Link>
+        </Title>
+      </div>
+
+      <Cryptocurrencies simplified />
+
+      <div className="home-heading-container">
+        <Title level={2} className="home-title">
+          Latest crypto news
+        </Title>
+        <Title level={3} className="show-more">
+          <Link to={routesPath.NEWS}>News</Link>
+        </Title>
+      </div>
+
+      <News simplified />
     </>
   );
 };

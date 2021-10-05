@@ -1,5 +1,6 @@
 import { Layout } from 'antd';
-import { HomePage, CryptocurrenciesPage, NewsPage, ExchangesPage, CryptoDetailsPage } from 'pages';
+import { Cryptocurrencies, News } from 'components';
+import { HomePage, ExchangesPage, CryptoDetailsPage } from 'pages';
 import { Switch, Route } from 'react-router-dom';
 
 export const routesPath = {
@@ -12,10 +13,10 @@ export const routesPath = {
 
 const publicRoutes = [
   { path: routesPath.HOME, exact: true, component: HomePage },
-  { path: routesPath.CRYPTOCURRENCIES, exact: false, component: CryptocurrenciesPage },
+  { path: routesPath.CRYPTOCURRENCIES, exact: false, component: Cryptocurrencies },
   { path: routesPath.CRYPTODETAILS, exact: false, component: CryptoDetailsPage },
   { path: routesPath.EXCHANGES, exact: false, component: ExchangesPage },
-  { path: routesPath.NEWS, exact: false, component: NewsPage },
+  { path: routesPath.NEWS, exact: false, component: News },
 ];
 
 export const Routes = () => {
