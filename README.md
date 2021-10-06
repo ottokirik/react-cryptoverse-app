@@ -1,6 +1,6 @@
 # Cryptoverse
 
-Несложный проект, по отбражению информации о криптовалютах.
+Несложный проект, по отбражению информации о криптовалютах по видео [Build and Deploy a React Cryptocurrency App and Master Redux Toolkit in One Video][1].
 
 Данные берутся с [Rapid Api][2] из двух источников. Для запросов используется RTK Query.
 
