@@ -3,7 +3,7 @@ import { createRequest } from './helpers';
 
 const cryptoApiHeaders = {
   'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-  'x-rapidapi-key': '',
+  'x-rapidapi-key': process.env.REACT_APP_RAPID_KEY,
 };
 
 const baseUrl = 'https://coinranking1.p.rapidapi.com';
@@ -25,7 +25,12 @@ export const cryptoApi = createApi({
     getCryptoHistory: builder.query({
       query: ({ coinID, timePeriod }) => createRequestCryptoApi(`/coin/${coinID}/history/${timePeriod}`),
     }),
+
+    getExchanges: builder.query({
+      query: () => createRequestCryptoApi(`/exchanges`),
+    }),
   }),
 });
 
-export const { useGetCryptosQuery, useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } = cryptoApi;
+export const { useGetCryptosQuery, useGetCryptoDetailsQuery, useGetCryptoHistoryQuery, useGetExchangesQuery } =
+  cryptoApi;

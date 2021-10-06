@@ -16,6 +16,7 @@ import {
 } from '@ant-design/icons';
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from 'services/cryptoApi';
 import { LineChart } from 'components';
+import { Loader } from 'components';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -29,7 +30,7 @@ export const CryptoDetailsPage = () => {
 
   const time = ['3h', '24h', '7d', '30d', '3m', '1y', '3y', '5y'];
 
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loader />;
 
   const cryptoDetails = data?.data?.coin;
 

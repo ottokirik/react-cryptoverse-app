@@ -4,7 +4,7 @@ import { createRequest } from './helpers';
 const cryptoNewsHeaders = {
   'x-bingapis-sdk': 'true',
   'x-rapidapi-host': 'bing-news-search1.p.rapidapi.com',
-  'x-rapidapi-key': '',
+  'x-rapidapi-key': process.env.REACT_APP_RAPID_KEY,
 };
 
 const baseUrl = 'https://bing-news-search1.p.rapidapi.com';

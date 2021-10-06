@@ -1,5 +1,5 @@
 import { Typography, Row, Col, Statistic } from 'antd';
-import { Cryptocurrencies, News } from 'components';
+import { Cryptocurrencies, News, Loader } from 'components';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
 import { routesPath } from 'routes';
@@ -13,8 +13,7 @@ export const HomePage = () => {
 
   const globalStats = data?.data?.stats;
 
-  if (isFetching) return 'Loading...';
-
+  if (isFetching) return <Loader />;
   return (
     <>
       <Title level={2} className="heading">

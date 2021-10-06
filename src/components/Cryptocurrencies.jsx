@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { routesPath } from 'routes';
 
 import { useGetCryptosQuery } from 'services/cryptoApi';
+import { Loader } from './Loader';
 
 export const Cryptocurrencies = ({ simplified, isOnHomePage }) => {
   const count = simplified ? 10 : 100;
@@ -21,7 +22,7 @@ export const Cryptocurrencies = ({ simplified, isOnHomePage }) => {
     setCryptos(filteredData);
   }, [cryptoList, searchTerm]);
 
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loader />;
 
   return (
     <>
